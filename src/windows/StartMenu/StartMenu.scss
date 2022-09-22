@@ -1,0 +1,64 @@
+@use "src/styles/colors";
+
+.start-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 100%;
+    width: 500px;
+    background-color: white;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
+    .header {
+        display: flex;
+        align-items: center;
+        background: colors.$windows-blue-gradient;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        color: white;
+        padding: 16px 16px;
+    }
+
+    .body {
+        display: flex;
+        border-right: solid 4px colors.$windows-blue;
+    }
+
+    .left-panel, .right-panel {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 4px;
+    }
+
+    .right-panel {
+        background-color: colors.$windows-pale-blue;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: end;
+        background: colors.$windows-blue-gradient;
+        color: white;
+        padding: 8px 16px;
+
+        *:not(:last-child) {
+            margin-right: 4px;
+        }
+    }
+
+    .logout-button, .turn-off-button {
+        cursor: pointer;
+        font-size: 12px;
+    }
+
+    .item-row {
+        display: flex;
+        align-items: center;
+
+        *:not(:last-child) {
+            margin-right: 4px;
+        }
+    }
+}
